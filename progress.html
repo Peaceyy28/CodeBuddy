@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Progress — CodeBuddy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Shared Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="site-brand">
+        <div class="brand-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <span>CodeBuddy</span>
+        <span class="brand-tag">Coach</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="challenges.html" class="nav-link">Challenges</a>
+        <a href="workspace.html" class="nav-link">Workspace</a>
+        <a href="progress.html" class="nav-link active">Progress</a>
+      </nav>
+
+      <a href="challenges.html" class="nav-cta">
+        <span>Continue Practice</span>
+        <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Progress Overview -->
+  <main class="progress-shell">
+    <header>
+      <h1 class="page-title">Learning Progress</h1>
+      <p class="page-description">
+        Keep track of your coding journey. Review completed problems, continue working on challenges in progress, and build steady problem-solving habits.
+      </p>
+    </header>
+
+    <!-- 3 Simple Metrics Cards -->
+    <section class="stats-grid" aria-label="Progress Metrics">
+      <div class="stat-card">
+        <span class="stat-label">Challenges Completed</span>
+        <div class="stat-number" id="completedCount">3</div>
+        <span class="stat-desc">Solutions validated and submitted</span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-label">Challenges Attempted</span>
+        <div class="stat-number" id="attemptedCount">5</div>
+        <span class="stat-desc">Active practice and hint reviews</span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-label">Topics Practised</span>
+        <div class="stat-number" id="topicsCount">4</div>
+        <span class="stat-desc">Strings, Loops, Arrays, Math</span>
+      </div>
+    </section>
+
+    <!-- Overall Completion Meter -->
+    <section class="overall-progress-card" aria-label="Curriculum Progress">
+      <div class="progress-header-row">
+        <div>
+          <h2 class="progress-headline">Curriculum Completion</h2>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.2rem;" id="progressFractionText">
+            3 of 8 fundamental challenges completed
+          </p>
+        </div>
+        <span class="progress-percentage" id="progressPercentage">38%</span>
+      </div>
+      <div class="progress-bar-bg" role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar-fill" id="progressBarFill" style="width: 37.5%;"></div>
+      </div>
+    </section>
+
+    <!-- Activity & Problem Breakdown List -->
+    <section class="history-section" aria-label="Challenge Status List">
+      <h2 class="history-title">Challenge Status</h2>
+      <div class="history-list" id="historyList">
+        <!-- Rendered dynamically by js/progress.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Minimal Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-icon" style="width: 24px; height: 24px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <span>CodeBuddy</span>
+      </div>
+      <p class="footer-copy">&copy; 2026 CodeBuddy. Built for beginner developers.</p>
+      <div class="footer-links">
+        <a href="challenges.html" class="footer-link">Challenges</a>
+        <a href="workspace.html" class="footer-link">Workspace</a>
+        <a href="progress.html" class="footer-link">Progress</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/challenges-data.js"></script>
+  <script src="js/progress.js"></script>
+</body>
+</html>
